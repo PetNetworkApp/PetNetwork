@@ -1,1 +1,82 @@
-# PetNetwork
+Original App Design Project - README
+===
+#     Pet Network
+
+## Table of Contents
+1. [Overview](#Overview)
+1. [Product Spec](#Product-Spec)
+1. [Wireframes](#Wireframes)
+2. [Schema](#Schema)
+
+## Overview
+### Description
+Pairs a user's animal with similar animals in the area. Allows the users to message each other and set up playdates. Users can also post pictures from the playdate.
+
+### App Evaluation
+[Evaluation of your app across the following attributes]
+- **Category:** Social Networking
+- **Mobile:** This app will be developed primarily for mobile devices. Users are able to use the camera to take pictures and location to find other users near them.
+- **Story:** Locates pets in a particular area and recommends them. The user can then message other users to meet up.
+- **Market:** Any individual with a pet.
+- **Habit:** The app could be used as often as the user desires.
+- **Scope:** First, pets will be matched based on pet type and location. It can then include messaging between users and the ability to post pictures.
+
+## Product Spec
+
+### 1. User Stories (Required and Optional)
+
+**Required Must-have Stories**
+
+* User logs in to access pet profile information
+* User sees feed of other pets with information such as pet name, pet location, pet type, etc.
+* User sees screen with pet profile which includes the pet's information
+* User can take and post pictures to their accounts
+* User can click on another user's profile
+
+**Optional Nice-to-have Stories**
+
+* User can message other pet owners using a message button
+* Message button is available after clicking on another user's profile
+
+### 2. Screen Archetypes
+
+* Login 
+* Register - User signs up or logs into their account
+* Feed Screen
+* Profile Screen
+* Settings Screen
+
+### 3. Navigation
+
+**Tab Navigation** (Tab to Screen)
+
+* Profile
+* Feed
+* Settings
+* Camera
+* Shearch
+
+**Flow Navigation** (Screen to Screen)
+
+* [list first screen here]
+   * [list screen navigation here]
+   * ...
+* [list second screen here]
+   * [list screen navigation here]
+   * ...
+
+## Wireframes
+![](https://i.imgur.com/5bcRTka.jpg)
+
+### [BONUS] Digital Wireframes & Mockups
+
+### [BONUS] Interactive Prototype
+
+## Schema 
+[This section will be completed in Unit 9]
+### Models
+[Add table of models]
+### Networking
+- [Add list of network requests by screen ]
+- [Create basic snippets for each Parse network request]
+- [OPTIONAL: List endpoints if using existing API such as Yelp]
