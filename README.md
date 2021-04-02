@@ -50,23 +50,28 @@ Pairs a user's animal with similar animals in the area. Allows the users to mess
 
 **Tab Navigation** (Tab to Screen)
 
+* Login / Logout
 * Profile
 * Feed
-* Settings
-* Camera
-* Shearch
+* Message
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Login / Logout
+   * User enter with login user and password
+   * If you don't have an account, go to the page to create a profile
+* Profile
+   * User can modify it
+* Feed
+    * User can scrolldown to see more
+    * User can navigate into a post to see more details about it
+    * User can jump to message 
+* Message
+    * User can post text, photo or videos about your pet 
 
 ## Wireframes
 ![](https://i.imgur.com/5bcRTka.jpg)
+
 
 ### [BONUS] Digital Wireframes & Mockups
 
