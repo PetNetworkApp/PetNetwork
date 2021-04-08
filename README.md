@@ -95,6 +95,7 @@ Pairs a user's animal with similar animals in the area. Allows the users to mess
 ### Networking
 - Home feed screen 
     - (Read/GET) Query all posts
+    CODE SNIPPET...
 public class ProfileFragment extends PostsFragment{
     @Override
     protected void queryPosts() {
