@@ -78,10 +78,33 @@ Pairs a user's animal with similar animals in the area. Allows the users to mess
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
+
 ### Models
-[Add table of models]
+
+#### Post
+
+   |Property|Type|Description|
+   |---|---|---|
+   |author|Pointer to User|User that uploaded the post|
+   |image|File|Image that user posts|
+   |caption|String|Caption for the image|
+   |createdAt|DateTime|Time and date when post is created|
+   |location|String|City where user is located|
+   
+
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+- Home feed screen 
+    - (Read/GET) Query all posts
+public class ProfileFragment extends PostsFragment{
+    @Override
+    protected void queryPosts() {
+        ParseQuery<Post> query = ParseQuery.getQuery(Post.class);
+        query.include(Post.KEY_USER);
+        query.whereEqualTo(Post.KEY_USER, ParseUser.getCurrentUser());
+        query.setLimit(20);
+        query.addDescendingOrder(Post.KEY_CREATED_KEY);
+        
+- Create Post screen 
+    - (Create/POST) Create a new post object
+- Profile screen-
+    - (Read/GET) all posts that belong to current user
