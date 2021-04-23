@@ -27,10 +27,10 @@ Pairs a user's animal with similar animals in the area. Allows the users to mess
 
 **Required Must-have Stories**
 
-[X] * User logs in to access pet profile information
+* User logs in to access pet profile information (COMPLETED)
 * User sees feed of other pets with information such as pet name, pet location, pet type, etc.
 * User sees screen with pet profile which includes the pet's information
-* User can take and post pictures to their accounts
+* User can take and post pictures to their accounts (COMPLETED)
 * User can click on another user's profile
 
 **Optional Nice-to-have Stories**
