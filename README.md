@@ -109,3 +109,8 @@ public class ProfileFragment extends PostsFragment{
     - (Create/POST) Create a new post object
 - Profile screen-
     - (Read/GET) all posts that belong to current user
+
+GIF
+
+
+<img src='walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
