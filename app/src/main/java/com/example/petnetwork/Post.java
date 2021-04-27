@@ -5,6 +5,9 @@ import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 @ParseClassName("Post")
 public class Post extends ParseObject {
 
@@ -35,6 +38,23 @@ public class Post extends ParseObject {
 
     public void setUser(ParseUser user) {
         put(KEY_USER, user);
+    }
+
+    public String getTimeStamp() {
+
+        Date today = new Date();
+        Date dateRaw = getCreatedAt();
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd MM yyyy");
+        SimpleDateFormat justTime = new SimpleDateFormat("h:mm a");
+
+        String compareDate = dateFormat.format(today);
+        String parseDate = dateFormat.format(dateRaw);
+
+        if (parseDate.equals(compareDate)) {
+            return justTime.format(dateRaw);
+        }
+        return parseDate;
     }
 
 
