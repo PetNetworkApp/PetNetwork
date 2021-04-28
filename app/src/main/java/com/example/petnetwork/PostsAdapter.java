@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.parse.ParseFile;
 
 import java.util.List;
@@ -51,6 +52,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         private ImageView ivImage;
         private TextView tvDescription;
         private TextView tvTimeStamp;
+        private ImageView ivAvatar;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -58,6 +60,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             ivImage = itemView.findViewById(R.id.ivImage);
             tvDescription = itemView.findViewById(R.id.tvDescription);
             tvTimeStamp = itemView.findViewById(R.id.tvTimeStamp);
+            ivAvatar = itemView.findViewById(R.id.ivAvatar);
         }
 
         public void bind(Post post) {
@@ -67,6 +70,10 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             ParseFile image = post.getImage();
             if (image != null) {
                 Glide.with(context).load(post.getImage().getUrl()).into(ivImage);
+            }
+            ParseFile avatar = post.getImage();
+            if (avatar != null) {
+                Glide.with(context).load(post.getAvatar().getUrl()).transform(new CircleCrop()).into(ivAvatar);
             }
 
 
