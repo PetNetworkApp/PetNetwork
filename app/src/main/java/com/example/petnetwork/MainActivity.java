@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.petnetwork.fragments.ComposeFragment;
+import com.example.petnetwork.fragments.MessageFragment;
 import com.example.petnetwork.fragments.PostsFragment;
 import com.example.petnetwork.fragments.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -37,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.action_compose:
                         fragment = new ComposeFragment();
+                        break;
+                    case R.id.action_messages:
+                        fragment = new MessageFragment();
                         break;
                     case R.id.action_profile:
                     default:
