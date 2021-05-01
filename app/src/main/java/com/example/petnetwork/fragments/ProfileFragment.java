@@ -56,7 +56,7 @@ public class ProfileFragment extends Fragment {
         rvPosts.setAdapter(adapter);
         rvPosts.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        queryPosts();
+        //queryPosts();
 
     }
 
