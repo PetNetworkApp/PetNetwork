@@ -5,6 +5,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,11 +23,14 @@ import com.parse.ParseException;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ProfileFragment extends Fragment {
 
+    //private EditText etBio;
+    private ImageView ivAvatar;
     private RecyclerView rvPosts;
     public static final String TAG = "PostsFragment";
     protected PostsAdapter adapter;
@@ -48,6 +54,8 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        //etBio = view.findViewById(R.id.etBio);
+        ivAvatar = view.findViewById(R.id.ivAvatar);
         rvPosts = view.findViewById(R.id.rvPosts);
 
         allPosts = new ArrayList<>();
@@ -56,7 +64,7 @@ public class ProfileFragment extends Fragment {
         rvPosts.setAdapter(adapter);
         rvPosts.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        //queryPosts();
+        queryPosts();
 
     }
 
@@ -75,7 +83,7 @@ public class ProfileFragment extends Fragment {
                     return;
                 }
                 for (Post post : posts) {
-                    Log.i(TAG, "Post: " + post.getDescpription() + ", username: " + post.getUser().getUsername());
+                    Log.i(TAG, "Post: " + post.getDescription() + ", username: " + post.getUser().getUsername());
                 }
                 allPosts.addAll(posts);
                 adapter.notifyDataSetChanged();

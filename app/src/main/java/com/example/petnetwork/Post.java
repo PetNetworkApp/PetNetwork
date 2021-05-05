@@ -16,8 +16,17 @@ public class Post extends ParseObject {
     public static final String KEY_USER = "user";
     public static final String KEY_CREATED_KEY = "createdAt";
     public static final String KEY_AVATAR = "avatar";
+    public static final String KEY_BIO = "bio";
 
-    public String getDescpription() {
+    public String getBio() {
+        return getString(KEY_BIO);
+    }
+
+    public void setBio(String bio) {
+        put(KEY_BIO, bio);
+    }
+
+    public String getDescription() {
         return getString(KEY_DESCRIPTION);
     }
 
