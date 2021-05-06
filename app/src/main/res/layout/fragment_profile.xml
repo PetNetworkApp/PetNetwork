@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".fragments.PostsFragment">
 
-    <TextView
+    <EditText
         android:id="@+id/etBio"
         android:layout_width="264dp"
         android:layout_height="126dp"

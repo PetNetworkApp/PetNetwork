@@ -54,6 +54,10 @@ public class Post extends ParseObject {
         return getParseUser(KEY_USER).getParseFile(KEY_AVATAR);
     }
 
+    public void setAvatar(ParseFile parseFile) {
+        put(KEY_AVATAR, parseFile);
+    }
+
     public String getTimeStamp() {
 
         Date today = new Date();
