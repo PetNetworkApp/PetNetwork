@@ -15,7 +15,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginStart="-1dp"
         android:layout_toEndOf="@+id/ivAvatar"
-        android:text="Example Bio Text" />
+        android:text="Hello! My name is Shaun and my dog's name is Walter. He is a 5 year old german shepherd. Walter is a calm and intelligent dog that loves playing fetch." />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvPosts"
@@ -32,8 +32,9 @@
     <ImageView
         android:id="@+id/ivAvatar"
         android:layout_width="148dp"
-        android:layout_height="wrap_content"
+        android:layout_height="120dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        tools:src="@tools:sample/avatars" />
+        android:src="@drawable/pic" />
+
 </RelativeLayout>

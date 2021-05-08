@@ -20,6 +20,7 @@ import com.example.petnetwork.PostsAdapter;
 import com.example.petnetwork.R;
 import com.parse.FindCallback;
 import com.parse.ParseException;
+import com.parse.ParseFile;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
