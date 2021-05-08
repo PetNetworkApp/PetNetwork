@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -30,8 +29,8 @@ import java.util.List;
 
 public class ProfileFragment extends Fragment {
 
-    private TextView tvBio;
-
+    private EditText etBio;
+    private ImageView ivAvatar;
     private RecyclerView rvPosts;
     public static final String TAG = "PostsFragment";
     protected PostsAdapter adapter;
@@ -54,8 +53,8 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        tvBio = view.findViewById(R.id.tvBio);
-
+        etBio = view.findViewById(R.id.etBio);
+        ivAvatar = view.findViewById(R.id.ivAvatar);
         rvPosts = view.findViewById(R.id.rvPosts);
 
         allPosts = new ArrayList<>();
@@ -90,4 +89,21 @@ public class ProfileFragment extends Fragment {
         });
     }
 
+
+    public String getEtBio() {
+        return Post.KEY_BIO;
+    }
+
+    public void setEtBio(EditText etBio) {
+        this.etBio = etBio;
+    }
+
+
+    public String getIvAvatar() {
+        return Post.KEY_AVATAR;
+    }
+
+    public void setIvAvatar(ImageView ivAvatar) {
+        this.ivAvatar = ivAvatar;
+    }
 }
